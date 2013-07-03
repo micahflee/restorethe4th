@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      #wrapper {
+        margin: auto;
+        background: #000000 url('/sites/all/themes/frontier/restorethe4th/4th_amendment.jpg') top left no-repeat;
+        background-size: 100% 100%;
+        width: 650px;
+        height: 650px;
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 101;
+        position: relative;
+      }
+      a#facebook:link, a#facebook:visited {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        width: 71px;
+        height: 71px;
+        z-index: 102;
+        background-image: url('/sites/all/themes/frontier/restorethe4th/f-up.png');
+      }
+      a#facebook:hover, a#facebook:active {
+        background-image: url('/sites/all/themes/frontier/restorethe4th/f-over.png');
+      }
+      a#twitter:link, a#twitter:visited {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 71px;
+        height: 71px;
+        z-index: 102;
+        background-image: url('/sites/all/themes/frontier/restorethe4th/t-up.png');
+      }
+      a#twitter:hover, a#twitter:active {
+        background-image: url('/sites/all/themes/frontier/restorethe4th/t-over.png');
+      }
+    </style>
+    <script src="jquery-1.10.1.min.js"></script>
+    <script>
+      $(function(){
+        var w = $(window).width(),
+            h = $(window).height();
+        var least = w;
+        if(h < w) least = h;
+        var scale = least / 650.0;
+        var img_size = 71.0 * scale,
+            img_dist = 20 * scale;
+        img_size = img_size+'px';
+        img_dist = img_dist+'px';
+        least = least+'px';
+        
+        $('#wrapper').css('width', least).css('height', least);
+        $('#facebook').css('width', img_size).css('height', img_size).css('background-size', img_size+' '+img_size).css('left', img_dist).css('bottom', img_dist);
+        $('#twitter').css('width', img_size).css('height', img_size).css('background-size', img_size+' '+img_size).css('right', img_dist).css('bottom', img_dist);
+
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <a href="https://twitter.com/intent/tweet/?text=This%20July%204th,%20I'm%20standing%20up%20for%20the%204th%20Amendment.%20Fight%20against%20unconstitutional%20surveillance&url=https://stopwatching.us/&hashtags=restorethe4th" target="_blank" id="twitter"></a>
+      <a href="https://www.facebook.com/share.php?u=https://stopwatching.us" target="_blank" id="facebook"></a>
+    </div>
+  </body>
+</html>
