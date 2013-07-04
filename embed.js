@@ -27,7 +27,7 @@ window.onload = function() {
   set_cookie('restorethe4th', 'seen');
 
   var el = document.createElement("div");
-  el.innerHTML = '<div id="restorethe4th" style="position:absolute;width:100%;height:100%;background-image:url(\'https://www.eff.org/sites/all/themes/frontier/restorethe4th/bg.png\');cursor:pointer;text-align:center;z-index:100;"><iframe id="restorethe4th-iframe" style="border:0;width:650px;height:650px;max-width:100%;max-height:100%;" src="https://www.eff.org/sites/all/themes/frontier/restorethe4th/embed.html" scrolling="no"></iframe><div id="restorethe4th-close" style="background-color:#ffffff;color:#697c80;font-family:helvetica;cursor:pointer;padding:5px;width:100px;margin:0 auto;">close</div></div>';
+  el.innerHTML = '<div id="restorethe4th" style="position:absolute;width:100%;height:100%;background-image:url(\'https://www.eff.org/sites/all/themes/frontier/restorethe4th/bg.png\');cursor:pointer;text-align:center;z-index:100;"><iframe id="restorethe4th-iframe" style="border:0;width:650px;height:650px;max-width:650px;max-height:650px;" src="https://www.eff.org/sites/all/themes/frontier/restorethe4th/embed.html" scrolling="no"></iframe><div id="restorethe4th-close" style="background-color:#ffffff;color:#697c80;font-family:helvetica;cursor:pointer;padding:5px;width:100px;margin:0 auto;">close</div></div>';
   document.body.insertBefore(el, document.body.firstChild);
   
   function close() { 
