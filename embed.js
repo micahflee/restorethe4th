@@ -34,8 +34,8 @@ window.onload = function() {
     var el = document.getElementById('restorethe4th');
     if(el) el.parentNode.removeChild(el);
   }
-  document.getElementById('restorethe4th').onclick = close;
-  document.getElementById('restorethe4th-close').onclick = close;
+  document.getElementById('restorethe4th').addEventListener('click', close);
+  document.getElementById('restorethe4th-close').addEventListener('click', close);
 
   var h = 0, w = 0;
   if(typeof(window.innerHeight) == 'number') { w = window.innerWidth; h = window.innerHeight; }
